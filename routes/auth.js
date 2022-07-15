@@ -5,6 +5,9 @@ const jwt = require('jsonwebtoken');
 const { body, validationResult } = require("express-validator");
 const router = express.Router();
 const fetchuser=require("../middleware/fetchuser")
+require('dotenv').config();
+
+const jwtSecret = process.env.JWT_SECRET;
 
 // Route 1: create a user using POST "api/auth/createuser"
 router.post(
@@ -45,7 +48,7 @@ router.post(
           id:user.id
         }
       }
-      const authToken = jwt.sign(data, 'sweetchildomine');
+      const authToken = jwt.sign(data, jwtSecret);
       console.log(authToken);
       success=true;
       res.json({success,authToken})
@@ -97,7 +100,7 @@ router.post(
             id:user.id
           }
         }
-        const authToken = jwt.sign(data, 'sweetchildomine');
+        const authToken = jwt.sign(data, jwtSecret);
         success=true;
         return res.json({success,authToken});
 
