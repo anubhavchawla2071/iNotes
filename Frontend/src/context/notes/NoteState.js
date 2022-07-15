@@ -1,7 +1,6 @@
 import noteContext from "./noteContext";
 import { useState } from "react";
 const NoteState = (props) => {
-  const host = "";
   const [notes, setNotes] = useState([]);
 
   const getNote = async () => {
@@ -23,7 +22,7 @@ const NoteState = (props) => {
   //Add a note
   const addNote = async (title, description, tag) => {
     //TODO: API call
-    const response = await fetch(`api/notes/addnote`, {
+    const response = await fetch(`/api/notes/addnote`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +40,7 @@ const NoteState = (props) => {
   //Delete a note
   const deleteNote = async (id) => {
     //TODO: API call
-    const response = await fetch(`api/notes/deletenote/${id}`, {
+    const response = await fetch(`/api/notes/deletenote/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +56,7 @@ const NoteState = (props) => {
   //Edit a note
   const editNote = async (id, title, description, tag) => {
     //API Call
-    const response = await fetch(`api/notes/updatenote/${id}`, {
+    const response = await fetch(`/api/notes/updatenote/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
