@@ -8,7 +8,7 @@ After cloning, run
 > npm install
 
 to install all the dependencies.
-Create a `.env` file and fill-in all the variables mentioned in `.env-test` file. 
+Create a `.env` file and fill-in all the variables mentioned in `.env-test` file and run `npm build` 
 
 To run the application, use 
 >npm start
