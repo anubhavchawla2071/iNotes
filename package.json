@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install && cd Frontend && npm install && npm run build",
-    "start": "node index.js"
+    "install": "npm install && cd Frontend && npm install",
+    "build": "cd Frontend && npm run build",
+    "start": "node index.js",
+    "nodemon": "npm run build && nodemon index.js"
   },
   "author": "",
   "license": "ISC",
