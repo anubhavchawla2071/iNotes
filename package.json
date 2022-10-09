@@ -10,7 +10,7 @@
     "start": "node index.js",
     "nodemon": "npm run build && nodemon index.js"
   },
-  "author": "",
+  "author": "Anubhav Chawla",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
