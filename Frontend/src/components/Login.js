@@ -49,7 +49,7 @@ export const Login = (props) => {
             onChange={onChange}
           />
           <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
+            Your e-mail is safe with us.
           </div>
         </div>
         <div className="mb-3">
