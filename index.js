@@ -25,4 +25,4 @@ app.get('*', (req, res) => {
 
 app.listen(port, () => {
   console.log(`iNote backend listening on port ${port}`)
-})
+});
